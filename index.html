@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenLife – Hành động xanh hôm nay</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Global background (lớp phủ xanh mượt phía sau video/content) -->
+  <div class="bg-global" aria-hidden="true"></div>
+
+  <!-- Navbar (xuất hiện ở mọi trang) -->
+  <header class="navbar" id="siteNavbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="GreenLife">
+        <span class="brand-mark" aria-hidden="true">🌿</span>
+        <span class="brand-text">GreenLife</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Mở menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" data-nav-links>
+        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="about.html" class="nav-link">Giới thiệu</a>
+        <a href="calculator.html" class="nav-link">Tính CO₂</a>
+        <a href="knowledge.html" class="nav-link">Kiến thức xanh</a>
+        <a href="stats.html" class="nav-link">Thống kê</a>
+        <a href="contact.html" class="nav-link">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="position:relative; z-index:1;">
+
+    <!-- Hero + video background -->
+    <section class="hero hero--video">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto">
+        <!-- Demo video từ nguồn công khai (nếu không chạy được offline, bạn có thể thay bằng file trong /videos) -->
+        <source src="videos/forest-river.mp4" type="video/mp4" />
+        <source src="https://cdn.coverr.co/videos/coverr-a-forest-with-a-river-9715/1080p.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-content reveal" style="position:relative; z-index:2;">
+        <div class="hero-badge">
+          <span class="dot" aria-hidden="true"></span>
+          <span>Bền vững • Trách nhiệm • Cùng nhau</span>
+        </div>
+        <h1 class="hero-title">Hành động xanh hôm nay – Tương lai xanh ngày mai</h1>
+        <p class="hero-subtitle">
+          GreenLife giúp bạn theo dõi tác động CO₂ cá nhân, khám phá kiến thức và tham gia các chiến dịch xanh.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="calculator.html">Bắt đầu tính CO₂</a>
+          <a class="btn btn-ghost" href="knowledge.html">Khám phá thêm</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="mini-card glass">
+            <div class="mini-icon">🌍</div>
+            <div>
+              <div class="mini-title">Theo dõi tác động</div>
+              <div class="mini-desc">Từ thói quen hằng ngày</div>
+            </div>
+          </div>
+          <div class="mini-card glass">
+            <div class="mini-icon">🌱</div>
+            <div>
+              <div class="mini-title">Gợi ý giảm phát thải</div>
+              <div class="mini-desc">Công cụ dễ dùng</div>
+            </div>
+          </div>
+          <div class="mini-card glass">
+            <div class="mini-icon">📈</div>
+            <div>
+              <div class="mini-title">Thống kê cộng đồng</div>
+              <div class="mini-desc">Động lực mỗi ngày</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Giới thiệu nhanh + các card -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Tại sao GreenLife?</h2>
+          <p class="section-desc">Chúng tôi biến hành động nhỏ của bạn thành tác động lớn cho môi trường.</p>
+        </div>
+
+        <div class="grid-4">
+          <article class="card reveal hover-lift">
+            <div class="card-icon">🧊</div>
+            <h3>Giảm CO₂</h3>
+            <p>Ước tính lượng phát thải và nhận gợi ý giảm phát thải phù hợp.</p>
+          </article>
+          <article class="card reveal hover-lift">
+            <div class="card-icon">🌳</div>
+            <h3>Trồng cây</h3>
+            <p>Quy đổi tác động CO₂ thành số cây cần trồng để bù đắp.</p>
+          </article>
+          <article class="card reveal hover-lift">
+            <div class="card-icon">⚡</div>
+            <h3>Tiết kiệm điện</h3>
+            <p>Tối ưu thói quen sử dụng điện để giảm phát thải gián tiếp.</p>
+          </article>
+          <article class="card reveal hover-lift">
+            <div class="card-icon">♻️</div>
+            <h3>Giảm rác nhựa</h3>
+            <p>Khuyến khích thay thế túi nilon bằng lựa chọn thân thiện.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cta">
+      <div class="container cta-inner glass">
+        <div>
+          <h2 class="section-title">Sẵn sàng bắt đầu?</h2>
+          <p class="section-desc">Tính CO₂ ngay hôm nay và chọn hành động xanh phù hợp.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="calculator.html">Tính lượng CO₂</a>
+          <a class="btn btn-ghost" href="stats.html">Xem thống kê</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> GreenLife. Xây dựng thói quen xanh mỗi ngày.</p>
+      <div class="footer-links">
+        <a href="about.html">Về chúng tôi</a>
+        <a href="contact.html">Liên hệ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

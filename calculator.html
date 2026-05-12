@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenLife – Tính CO₂</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Global background (lớp phủ mượt phía sau nội dung) -->
+  <div class="bg-global" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="siteNavbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="GreenLife">
+        <span class="brand-mark" aria-hidden="true">🌿</span>
+        <span class="brand-text">GreenLife</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Mở menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" data-nav-links>
+        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="about.html" class="nav-link">Giới thiệu</a>
+        <a href="calculator.html" class="nav-link">Tính CO₂</a>
+        <a href="knowledge.html" class="nav-link">Kiến thức xanh</a>
+        <a href="stats.html" class="nav-link">Thống kê</a>
+        <a href="contact.html" class="nav-link">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page">
+      <div class="container">
+        <div class="page-hero reveal">
+          <div class="breadcrumb small">GreenLife • Tính CO₂</div>
+          <h1 class="page-title">Tính lượng CO₂ từ thói quen của bạn</h1>
+          <p class="section-desc">
+            Nhập dữ liệu hằng ngày/tháng để nhận ước tính CO₂, mức độ ảnh hưởng và số cây cần trồng.
+            Công cụ cũng gợi ý hành động giảm phát thải.
+          </p>
+        </div>
+
+        <div class="panel reveal" style="padding: 1.2rem;">
+          <div class="form-grid" style="align-items:stretch;">
+            <div class="field">
+              <form id="co2Form" novalidate>
+                <div class="row-2">
+                  <div>
+                    <label for="km">Km đi xe máy/ngày</label>
+                    <input id="km" name="km" type="number" min="0" step="0.1" placeholder="Ví dụ: 10" />
+                    <div class="help">Ước tính dựa trên quãng đường bạn thường đi bằng xe máy.</div>
+                  </div>
+
+                  <div>
+                    <label for="kwh">kWh điện/tháng</label>
+                    <input id="kwh" name="kwh" type="number" min="0" step="0.1" placeholder="Ví dụ: 180" />
+                    <div class="help">Dựa theo số kWh trên hóa đơn điện.</div>
+                  </div>
+                </div>
+
+                <div style="height: .9rem"></div>
+
+                <div class="row-2">
+                  <div>
+                    <label for="bag">Túi nilon/ngày</label>
+                    <input id="bag" name="bag" type="number" min="0" step="1" placeholder="Ví dụ: 2" />
+                    <div class="help">Số túi bạn dùng hằng ngày.</div>
+                  </div>
+
+                  <div>
+                    <label for="ac">Giờ dùng điều hòa/ngày</label>
+                    <input id="ac" name="ac" type="number" min="0" step="0.1" placeholder="Ví dụ: 6" />
+                    <div class="help">Tổng số giờ điều hòa hoạt động mỗi ngày.</div>
+                  </div>
+                </div>
+
+                <div style="height: 1.1rem"></div>
+
+                <button class="btn btn-primary" type="submit" style="width:100%">Tính lượng CO₂</button>
+
+                <div id="calcError" class="error" role="alert"></div>
+              </form>
+
+              <div class="help" style="margin-top:1rem;">
+                <b>Công thức demo:</b>
+                <div style="line-height:1.8;">
+                  • Xe máy: km × 0.12
+                  <br/>• Điện: kWh × 0.85
+                  <br/>• Túi nilon: số lượng × 0.01
+                  <br/>• Điều hòa: giờ × 0.5
+                </div>
+              </div>
+            </div>
+
+            <div class="field" style="border-left: 1px solid rgba(255,255,255,.08);">
+              <div class="results">
+                <h2 style="margin:0 0 .8rem; font-size:1.2rem; letter-spacing:-.2px">Kết quả</h2>
+
+                <div class="result-list">
+                  <div class="result-item">
+                    <div class="k">Tổng CO₂</div>
+                    <div class="v" id="outTotalCO2">—</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="k">Mức độ ảnh hưởng</div>
+                    <div class="v" id="outImpact" style="font-size:1.1rem;">—</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="k">Số cây cần trồng</div>
+                    <div class="v" id="outTrees">—</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="k">Gợi ý giảm phát thải</div>
+                    <div class="v" id="outTip" style="font-size:1rem; font-weight:800; color: rgba(255,255,255,.92)">—</div>
+                  </div>
+                </div>
+
+                <div style="height: 1rem"></div>
+
+                <div class="panel glass" style="padding:1rem;">
+                  <h3 style="margin:.1rem 0 .8rem; font-size:1.05rem;">Biểu đồ CO₂ theo nguồn</h3>
+                  <div style="height: 280px; position: relative;">
+                    <canvas id="co2Chart"></canvas>
+                  </div>
+                  <div class="help">Biểu đồ cập nhật sau khi bạn bấm “Tính lượng CO₂”.</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> GreenLife. Xây dựng thói quen xanh mỗi ngày.</p>
+      <div class="footer-links">
+        <a href="about.html">Về chúng tôi</a>
+        <a href="contact.html">Liên hệ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

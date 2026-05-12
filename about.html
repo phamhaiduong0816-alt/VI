@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenLife – Giới thiệu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Global background (lớp phủ mượt phía sau nội dung) -->
+  <div class="bg-global" aria-hidden="true"></div>
+
+  <!-- Navbar (xuất hiện ở mọi trang) -->
+  <header class="navbar" id="siteNavbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="GreenLife">
+        <span class="brand-mark" aria-hidden="true">🌿</span>
+        <span class="brand-text">GreenLife</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Mở menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" data-nav-links>
+        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="about.html" class="nav-link">Giới thiệu</a>
+        <a href="calculator.html" class="nav-link">Tính CO₂</a>
+        <a href="knowledge.html" class="nav-link">Kiến thức xanh</a>
+        <a href="stats.html" class="nav-link">Thống kê</a>
+        <a href="contact.html" class="nav-link">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page">
+      <div class="container">
+        <div class="page-hero">
+          <div class="breadcrumb small">GreenLife • Giới thiệu</div>
+          <h1 class="page-title">GreenLife – Nền tảng hành động xanh cá nhân</h1>
+          <p class="section-desc">
+            GreenLife ra đời để giúp bạn hiểu rõ tác động môi trường từ những thói quen mỗi ngày.
+            Từ đó, chúng tôi gợi ý lộ trình hành động dễ làm – đúng thời điểm – và đo lường được kết quả.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card reveal hover-lift">
+            <div class="card-icon">♻️</div>
+            <h3>Ý nghĩa phát triển bền vững</h3>
+            <p>
+              Bền vững không chỉ là khẩu hiệu. Đó là cách ta tiêu dùng thông minh hơn, di chuyển hiệu quả hơn,
+              và xây dựng lối sống ít phát thải.
+            </p>
+          </article>
+
+          <article class="card reveal hover-lift">
+            <div class="card-icon">🎯</div>
+            <h3>Mục tiêu dự án</h3>
+            <p>
+              Tạo một “điểm chạm” để mọi người bắt đầu từ việc đơn giản: theo dõi CO₂, nhận gợi ý giảm phát thải,
+              và cùng tham gia các chiến dịch xanh.
+            </p>
+          </article>
+
+          <article class="card reveal hover-lift">
+            <div class="card-icon">🧭</div>
+            <h3>Timeline phát triển</h3>
+            <p>
+              2024: Thiết kế công cụ theo dõi CO₂ • 2025: Mở rộng tri thức xanh • 2026: Tăng kết nối cộng đồng
+              và minh bạch thống kê.
+            </p>
+          </article>
+        </div>
+
+        <div style="height:22px"></div>
+
+        <div class="panel p-2 reveal" style="padding: 1.2rem 1.2rem; border-radius: var(--radius-lg);">
+          <h2 class="section-title" style="font-size:1.65rem; margin-bottom:.5rem;">Sứ mệnh &amp; Tầm nhìn</h2>
+          <p class="section-desc" style="margin-top:0; max-width: 900px;">
+            Chúng tôi tin rằng thay đổi nhỏ, nếu được duy trì và lan tỏa, sẽ tạo ra tác động lớn.
+            GreenLife hướng đến việc biến kiến thức thành hành động cụ thể — dễ thực hiện, có động lực và đo lường.
+          </p>
+
+          <div class="row-2" style="margin-top:1.2rem;">
+            <article class="card glass reveal" style="margin:0;">
+              <div class="card-icon">🌍</div>
+              <h3>Sứ mệnh</h3>
+              <p>
+                Giúp cá nhân hiểu tác động CO₂ từ thói quen hàng ngày và cung cấp gợi ý giảm phát thải rõ ràng.
+              </p>
+            </article>
+
+            <article class="card glass reveal" style="margin:0;">
+              <div class="card-icon">🌱</div>
+              <h3>Tầm nhìn</h3>
+              <p>
+                Xây dựng cộng đồng hành động xanh, nơi mỗi người cùng tham gia chiến dịch và nâng chuẩn sống bền vững.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <section class="section section--cta" style="padding-bottom:0;">
+          <div class="cta-inner glass container" style="padding: 1.7rem;">
+            <div>
+              <h2 class="section-title">Sẵn sàng tạo khác biệt?</h2>
+              <p class="section-desc">Bắt đầu bằng việc tính lượng CO₂ và chọn hành động phù hợp cho bạn.</p>
+            </div>
+            <div class="cta-actions">
+              <a class="btn btn-primary" href="calculator.html">Tính lượng CO₂</a>
+              <a class="btn btn-ghost" href="knowledge.html">Tìm hiểu kiến thức xanh</a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> GreenLife. Xây dựng thói quen xanh mỗi ngày.</p>
+      <div class="footer-links">
+        <a href="about.html">Về chúng tôi</a>
+        <a href="contact.html">Liên hệ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenLife – Kiến thức xanh</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar" id="siteNavbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="GreenLife">
+        <span class="brand-mark" aria-hidden="true">🌿</span>
+        <span class="brand-text">GreenLife</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Mở menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" data-nav-links>
+        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="about.html" class="nav-link">Giới thiệu</a>
+        <a href="calculator.html" class="nav-link">Tính CO₂</a>
+        <a href="knowledge.html" class="nav-link">Kiến thức xanh</a>
+        <a href="stats.html" class="nav-link">Thống kê</a>
+        <a href="contact.html" class="nav-link">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page">
+      <div class="container">
+        <div class="page-hero">
+          <div class="breadcrumb small">GreenLife • Kiến thức xanh</div>
+          <h1 class="page-title">Học cách sống xanh mỗi ngày</h1>
+          <p class="section-desc">
+            Từ tiết kiệm điện, giảm nhựa đến tái chế đúng cách — những kiến thức ngắn gọn giúp bạn hành động ngay.
+          </p>
+        </div>
+
+        <div class="grid-4" style="margin-top:1.2rem;">
+          <article class="card reveal hover-lift">
+            <div class="card-icon" aria-hidden="true">⚡</div>
+            <h3>Tiết kiệm điện</h3>
+            <p>
+              Tắt thiết bị khi không dùng, ưu tiên thiết bị tiết kiệm năng lượng và tối ưu điều hòa.
+            </p>
+            <a class="btn btn-ghost" href="#" style="margin-top:1rem; width:fit-content;" onclick="return false;">Xem thêm</a>
+          </article>
+
+          <article class="card reveal hover-lift">
+            <div class="card-icon" aria-hidden="true">🗑️</div>
+            <h3>Giảm nhựa</h3>
+            <p>
+              Mang bình nước cá nhân, dùng túi vải và ưu tiên sản phẩm tái sử dụng để giảm rác thải nhựa.
+            </p>
+            <a class="btn btn-ghost" href="#" style="margin-top:1rem; width:fit-content;" onclick="return false;">Xem thêm</a>
+          </article>
+
+          <article class="card reveal hover-lift">
+            <div class="card-icon" aria-hidden="true">♻️</div>
+            <h3>Tái chế</h3>
+            <p>
+              Phân loại đúng nhóm vật liệu, rửa sạch và tái chế theo hướng dẫn địa phương.
+            </p>
+            <a class="btn btn-ghost" href="#" style="margin-top:1rem; width:fit-content;" onclick="return false;">Xem thêm</a>
+          </article>
+
+          <article class="card reveal hover-lift">
+            <div class="card-icon" aria-hidden="true">🚍</div>
+            <h3>Đi xe công cộng</h3>
+            <p>
+              Giảm phát thải từ phương tiện cá nhân bằng cách đi chung hoặc chọn phương tiện công cộng.
+            </p>
+            <a class="btn btn-ghost" href="#" style="margin-top:1rem; width:fit-content;" onclick="return false;">Xem thêm</a>
+          </article>
+
+          <article class="card reveal hover-lift" style="grid-column: span 2;">
+            <div style="display:flex; gap:1rem; align-items:flex-start;">
+              <div class="card-icon" aria-hidden="true">🌱</div>
+              <div>
+                <h3 style="margin-bottom:.3rem;">Trồng cây</h3>
+                <p style="margin-top:0;">
+                  Trồng cây giúp hấp thụ CO₂ và cải thiện môi trường sống. Hãy bắt đầu từ loại cây phù hợp điều kiện.
+                </p>
+                <div class="help">Gợi ý: kiểm tra ánh sáng, loại đất và tần suất tưới trước khi trồng.</div>
+                <a class="btn btn-ghost" href="calculator.html" style="margin-top:1rem; width:fit-content;">Tính CO₂ để biết cần trồng bao nhiêu</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal hover-lift">
+            <div class="card-icon" aria-hidden="true">📚</div>
+            <h3>Thói quen bền vững</h3>
+            <p>
+              Lập lịch hành động: giảm lãng phí, mua sắm thông minh, và chia sẻ kinh nghiệm với cộng đồng.
+            </p>
+            <a class="btn btn-ghost" href="stats.html" style="margin-top:1rem; width:fit-content;">Xem thống kê</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container cta-inner glass" style="border-radius: var(--radius-lg);">
+        <div>
+          <h2 class="section-title" style="font-size:1.8rem;">Sẵn sàng biến kiến thức thành hành động?</h2>
+          <p class="section-desc">Dùng công cụ Tính CO₂ và tham gia chiến dịch xanh để tạo tác động thực tế.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="calculator.html">Tính lượng CO₂</a>
+          <a class="btn btn-ghost" href="contact.html">Tham gia cùng GreenLife</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> GreenLife. Xây dựng thói quen xanh mỗi ngày.</p>
+      <div class="footer-links">
+        <a href="about.html">Về chúng tôi</a>
+        <a href="contact.html">Liên hệ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenLife – Thống kê</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Global background (lớp phủ mượt phía sau nội dung) -->
+  <div class="bg-global" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="siteNavbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="GreenLife">
+        <span class="brand-mark" aria-hidden="true">🌿</span>
+        <span class="brand-text">GreenLife</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Mở menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" data-nav-links>
+        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="about.html" class="nav-link">Giới thiệu</a>
+        <a href="calculator.html" class="nav-link">Tính CO₂</a>
+        <a href="knowledge.html" class="nav-link">Kiến thức xanh</a>
+        <a href="stats.html" class="nav-link">Thống kê</a>
+        <a href="contact.html" class="nav-link">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page">
+      <div class="container">
+        <div class="page-hero">
+          <div class="breadcrumb small">GreenLife • Thống kê</div>
+          <h1 class="page-title">Cộng đồng đang làm xanh mỗi ngày</h1>
+          <p class="section-desc">Những con số demo được cập nhật bằng animation mượt khi bạn cuộn tới.</p>
+        </div>
+
+        <div class="panel glass reveal" style="padding:1.2rem;">
+          <div class="counter-grid" id="statsRoot">
+            <div class="card counter-card glass reveal" style="margin:0;">
+              <div class="counter-label">Tổng người tham gia</div>
+              <div class="counter-num" id="counterPeople">0</div>
+              <div class="help">Tính đến hôm nay (demo).</div>
+            </div>
+
+            <div class="card counter-card glass reveal" style="margin:0;">
+              <div class="counter-label">Tổng CO₂ giảm được</div>
+              <div class="counter-num" id="counterCO2">0</div>
+              <div class="help">Quy đổi từ hành động cá nhân (demo).</div>
+            </div>
+
+            <div class="card counter-card glass reveal" style="margin:0;">
+              <div class="counter-label">Tổng cây đã trồng</div>
+              <div class="counter-num" id="counterTrees">0</div>
+              <div class="help">Tổng hợp từ các chiến dịch (demo).</div>
+            </div>
+
+            <div class="card counter-card glass reveal" style="margin:0;">
+              <div class="counter-label">Tổng chiến dịch xanh</div>
+              <div class="counter-num" id="counterCampaigns">0</div>
+              <div class="help">Lan tỏa và đồng hành (demo).</div>
+            </div>
+          </div>
+
+          <div style="height:1.2rem"></div>
+
+          <div class="grid-3" style="align-items:start;">
+            <div class="card glass progress-wrap reveal" style="margin:0; grid-column: span 2;">
+              <h3 style="margin:.1rem 0 .9rem; font-size:1.1rem;">Tiến độ chiến dịch xanh</h3>
+              <div class="progress" id="statsProgress" data-progress="74">
+                <span style="display:block;"></span>
+              </div>
+              <div class="help" style="margin-top:.7rem;">Hoàn thành mục tiêu phát thải (demo).</div>
+            </div>
+
+            <div class="card glass reveal" style="margin:0; min-height: 290px;">
+              <h3 style="margin:.1rem 0 .9rem; font-size:1.1rem;">Biểu đồ xu hướng</h3>
+              <div style="height:240px; position:relative;">
+                <canvas id="statsChart"></canvas>
+              </div>
+              <div class="help">Biểu đồ line mượt (demo).</div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section" style="padding-top: 1.8rem;">
+          <div class="grid-3">
+            <article class="card reveal hover-lift glass">
+              <div class="card-icon" aria-hidden="true">🎯</div>
+              <h3>Hành động đúng mục tiêu</h3>
+              <p>Chọn thói quen dễ làm và theo dõi tác động theo thời gian.</p>
+            </article>
+            <article class="card reveal hover-lift glass">
+              <div class="card-icon" aria-hidden="true">🤝</div>
+              <h3>Lan tỏa cùng bạn bè</h3>
+              <p>Chia sẻ chiến dịch để nhiều người cùng giảm phát thải.</p>
+            </article>
+            <article class="card reveal hover-lift glass">
+              <div class="card-icon" aria-hidden="true">🌍</div>
+              <h3>Nhìn thấy thay đổi</h3>
+              <p>Các chỉ số demo giúp bạn có động lực mỗi ngày.</p>
+            </article>
+          </div>
+        </section>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> GreenLife. Xây dựng thói quen xanh mỗi ngày.</p>
+      <div class="footer-links">
+        <a href="about.html">Về chúng tôi</a>
+        <a href="contact.html">Liên hệ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

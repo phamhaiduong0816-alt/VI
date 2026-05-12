@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenLife – Liên hệ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Global background (lớp phủ mượt phía sau nội dung) -->
+  <div class="bg-global" aria-hidden="true"></div>
+
+  <header class="navbar" id="siteNavbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="GreenLife">
+        <span class="brand-mark" aria-hidden="true">🌿</span>
+        <span class="brand-text">GreenLife</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Mở menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" data-nav-links>
+        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="about.html" class="nav-link">Giới thiệu</a>
+        <a href="calculator.html" class="nav-link">Tính CO₂</a>
+        <a href="knowledge.html" class="nav-link">Kiến thức xanh</a>
+        <a href="stats.html" class="nav-link">Thống kê</a>
+        <a href="contact.html" class="nav-link">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page">
+      <div class="container">
+        <div class="page-hero reveal">
+          <div class="breadcrumb small">GreenLife • Liên hệ</div>
+          <h1 class="page-title">Gửi tin nhắn &amp; đăng ký tham gia</h1>
+          <p class="section-desc">
+            Bạn có câu hỏi, muốn hợp tác hoặc muốn tham gia cộng đồng GreenLife? Điền form bên dưới để chúng tôi phản hồi.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="panel glass reveal" style="padding:1.2rem;">
+            <h2 style="margin:.2rem 0 .8rem; font-size:1.15rem;">Google Maps (giả lập)</h2>
+            <div class="map-mock" aria-label="Bản đồ giả lập">
+              <div class="map-grid" aria-hidden="true"></div>
+              <div class="map-pin" aria-hidden="true">📍</div>
+            </div>
+            <p class="help" style="margin-top:.9rem;">
+              Trung tâm GreenLife (Demo) – Sẵn sàng kết nối các chiến dịch xanh.
+            </p>
+          </div>
+
+          <div class="panel glass reveal" style="padding:1.2rem; grid-column: span 2;">
+            <div class="row-2" style="gap:1rem;">
+              <div>
+                <h2 style="margin:.2rem 0 .6rem; font-size:1.15rem;">Thông tin liên hệ</h2>
+                <div class="result-list" style="margin-top:0;">
+                  <div class="result-item">
+                    <div class="k">Email</div>
+                    <div class="v" style="font-size:1rem; margin-top:.3rem;">hello@greenlife.vn</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="k">Hotline</div>
+                    <div class="v" style="font-size:1rem; margin-top:.3rem;">(+84) 0123 456 789</div>
+                  </div>
+                  <div class="result-item">
+                    <div class="k">Địa chỉ</div>
+                    <div class="v" style="font-size:1rem; margin-top:.3rem;">Quận 1, TP. Hồ Chí Minh (Demo)</div>
+                  </div>
+                </div>
+
+                <div style="margin-top:1rem;">
+                  <h3 style="margin:.2rem 0 .6rem; font-size:1.05rem;">Kết nối mạng xã hội</h3>
+                  <div class="hero-actions" style="margin-top:0;">
+                    <a class="btn btn-ghost" href="#" aria-label="Facebook" onclick="return false;">💚 Facebook</a>
+                    <a class="btn btn-ghost" href="#" aria-label="Instagram" onclick="return false;">🌿 Instagram</a>
+                    <a class="btn btn-ghost" href="#" aria-label="YouTube" onclick="return false;">📹 YouTube</a>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h2 style="margin:.2rem 0 .6rem; font-size:1.15rem;">Biểu mẫu liên hệ</h2>
+                <form class="panel glass" style="padding:1rem;" id="contactForm" novalidate>
+                  <div class="field" style="padding:0; margin-bottom: .85rem;">
+                    <label for="name">Họ tên</label>
+                    <input id="name" name="name" type="text" placeholder="Ví dụ: Nguyễn An" />
+                  </div>
+
+                  <div class="field" style="padding:0; margin-bottom: .85rem;">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="vi.duong@gmail.com" />
+                  </div>
+
+                  <div class="field" style="padding:0; margin-bottom: .85rem;">
+                    <label for="message">Nội dung liên hệ</label>
+                    <textarea id="message" name="message" placeholder="Viết nội dung bạn muốn trao đổi..."></textarea>
+                  </div>
+
+                  <button class="btn btn-primary" type="submit" style="width:100%">Gửi liên hệ</button>
+                  <div id="contactNotice" class="help" style="margin-top:.7rem; display:none;"></div>
+                </form>
+              </div>
+            </div>
+
+            <div style="height:1rem"></div>
+
+            <div class="panel glass" style="padding:1rem;">
+              <h2 style="margin:.2rem 0 .6rem; font-size:1.15rem;">Form đăng ký tham gia (Demo)</h2>
+              <form class="form-grid" id="registerForm" novalidate style="grid-template-columns: 1fr 1fr; gap: .9rem;">
+                <div class="field" style="padding:0;">
+                  <label for="rName">Họ tên</label>
+                  <input id="rName" name="rName" type="text" placeholder="Ví dụ: Lê Minh" />
+                </div>
+
+                <div class="field" style="padding:0;">
+                  <label for="rEmail">Email</label>
+                  <input id="rEmail" name="rEmail" type="email" placeholder="minh@example.com" />
+                </div>
+
+                <div class="field" style="padding:0; grid-column: span 2;">
+                  <label for="rRole">Bạn muốn tham gia vai trò nào?</label>
+                  <input id="rRole" name="rRole" type="text" placeholder="Tình nguyện viên / Đối tác / Truyền thông ..." />
+                  <div class="help">Đây là dữ liệu demo để minh họa giao diện.</div>
+                </div>
+
+                <div class="error" id="registerError" role="alert" style="grid-column: span 2; display:none;"></div>
+
+                <button class="btn btn-primary" type="submit" style="grid-column: span 2; width:100%">
+                  Đăng ký ngay
+                </button>
+
+                <div id="registerNotice" class="help" style="grid-column: span 2; display:none;"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> GreenLife. Xây dựng thói quen xanh mỗi ngày.</p>
+      <div class="footer-links">
+        <a href="about.html">Về chúng tôi</a>
+        <a href="contact.html">Liên hệ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Contact + Register form (demo validation)
+    (function(){
+      const contactForm = document.getElementById('contactForm');
+      const contactNotice = document.getElementById('contactNotice');
+
+      if(contactForm){
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          contactNotice.style.display = 'none';
+
+          const name = document.getElementById('name');
+          const email = document.getElementById('email');
+          const message = document.getElementById('message');
+
+          const errors = [];
+          if(!name || !name.value.trim()) errors.push('Họ tên');
+          if(!email || !email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) errors.push('Email');
+          if(!message || !message.value.trim()) errors.push('Nội dung');
+
+          if(errors.length){
+            contactNotice.textContent = 'Vui lòng kiểm tra: ' + errors.join(', ') + '.';
+            contactNotice.style.display = 'block';
+            contactNotice.style.color = '#ffd2d2';
+            return;
+          }
+
+          contactNotice.textContent = 'Cảm ơn bạn! GreenLife sẽ phản hồi sớm (demo).';
+          contactNotice.style.display = 'block';
+          contactNotice.style.color = 'rgba(202,255,223,.95)';
+          contactForm.reset();
+        });
+      }
+
+      const registerForm = document.getElementById('registerForm');
+      const registerError = document.getElementById('registerError');
+      const registerNotice = document.getElementById('registerNotice');
+
+      if(registerForm){
+        registerForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if(registerError) registerError.style.display = 'none';
+          if(registerNotice){ registerNotice.style.display = 'none'; }
+
+          const rName = document.getElementById('rName');
+          const rEmail = document.getElementById('rEmail');
+          const rRole = document.getElementById('rRole');
+
+          const errors = [];
+          if(!rName || !rName.value.trim()) errors.push('Họ tên');
+          if(!rEmail || !rEmail.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(rEmail.value.trim())) errors.push('Email');
+          if(!rRole || !rRole.value.trim()) errors.push('Vai trò');
+
+          if(errors.length){
+            if(registerError){
+              registerError.textContent = 'Vui lòng kiểm tra: ' + errors.join(', ') + '.';
+              registerError.style.display = 'block';
+            }
+            return;
+          }
+
+          if(registerNotice){
+            registerNotice.textContent = 'Đăng ký thành công! Bạn sẽ nhận cập nhật sớm (demo).';
+            registerNotice.style.display = 'block';
+          }
+          registerForm.reset();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+
